@@ -2,6 +2,11 @@ name: Call a reusable workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      username:
+        description: '收件箱展示的来件人名字'
+        required: true
+        default: '大表哥'
 
 jobs:
   # call-workflow:
@@ -10,6 +15,6 @@ jobs:
   call-workflow-passing-data:
     uses: qzsiniong/github-actions-demo/.github/workflows/child.yml@main
     with:
-      username: mona
+      username: ${{ inputs.username }}
     secrets:
       token: ${{ secrets.TOKEN }}
