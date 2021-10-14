@@ -1,0 +1,15 @@
+name: Call a reusable workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  # call-workflow:
+  #   uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
+
+  call-workflow-passing-data:
+    uses: qzsiniong/github-actions-demo/.github/workflows/child.yml@test-reusable
+    with:
+      username: mona
+    secrets:
+      token: ${{ secrets.TOKEN }}
