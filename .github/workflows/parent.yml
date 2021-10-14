@@ -15,6 +15,6 @@ jobs:
   call-workflow-passing-data:
     uses: qzsiniong/github-actions-demo/.github/workflows/child.yml@main
     with:
-      username: ${{ github.inputs.username }}
+      username: ${{ github.event.inputs.username }}
     secrets:
       token: ${{ secrets.TOKEN }}
