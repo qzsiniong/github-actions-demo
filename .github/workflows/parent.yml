@@ -8,7 +8,7 @@ jobs:
   #   uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
 
   call-workflow-passing-data:
-    uses: qzsiniong/github-actions-demo/.github/workflows/child.yml@test-reusable
+    uses: qzsiniong/github-actions-demo/.github/workflows/child.yml@main
     with:
       username: mona
     secrets:
